@@ -1,4 +1,9 @@
 # Module 5 Lab 4
+
+Use the Express App template in Exercise4/m5lab4_expressapp from Google Drive. The
+friendRoutes.js file details 4 tasks to give more understanding on setting up different
+types of requests via routes:
+
 ## Part 1: 
 Add support to the 'filter' endpoint for a new query parameter 'letter' which filters friends by starting letter 
 ## Part 2: 
