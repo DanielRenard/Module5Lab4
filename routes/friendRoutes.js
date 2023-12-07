@@ -96,8 +96,13 @@ router.post('/', (req, res) => {
 router.put('/:id', (req, res) => {
     let friendId = req.params.id;
     let updatedFriend = req.body;
-    let findFriend = friends.find(friend => friend.id === friendId);
-    //check if findFriend exists otherwise throw error
+    let findFriend = friends.find(friend => friend.id == friendId);
+    console.log(friendId)
+    if (!findFriend) {
+        res.status(404).json({error: 'no friend with matching id'}) //check if findFriend exists otherwise throw error
+        return
+    }
+    
     let friendIndex = friends.indexOf(findFriend)
     friends[friendIndex] = updatedFriend
     
